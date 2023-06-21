@@ -5,6 +5,7 @@
 
     $queryC = " SELECT 
                 r.id,
+                c.id_comuna,
                 c.nombre
                 FROM tbl_region r
                 inner join tbl_provincia p on r.id = p.idRegion
@@ -16,7 +17,7 @@
     $html = "<option value=''>seleccionar una region...</option>";
     while ($comunas = $resultadoC->fetch_assoc()) 
     {
-        $html.= "<option value='".$comunas['nombre']."'>".$comunas['nombre']."</option>";
+        $html.= "<option idComuna='".$comunas['id_comuna']."' value='".$comunas['nombre']."'>".$comunas['nombre']."</option>";
     }
     echo $html;
 

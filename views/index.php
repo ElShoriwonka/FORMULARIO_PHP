@@ -45,7 +45,7 @@
                         <?php
                         while ($row = $resultado->fetch_assoc()) {
                         ?>
-                            <option id="<?php echo $row['id'] ?>" value="<?php echo $row['id'] ?>"><?php echo $row['nombre'] ?></option>
+                            <option nomRegion="<?php echo $row['nombre'];?>" id="<?php echo $row['id'];?>" value="<?php echo $row['id'];?>"><?php echo $row['nombre'];?></option>
                         <?php
                         }
                         ?>
@@ -139,9 +139,12 @@
             const mail = $('#mail').val();
             const rut = $('#rut').val();
             const region = $('#region option:selected').val();
+            const nomRegion = $('#region option:selected').attr("nomRegion");
             const comuna = $('#comuna option:selected').val();
             const candidato = $('#candidato option:selected').val();
             const checkboxes = document.getElementsByName("checkbox");
+            const idComuna = $("#comuna option:selected").attr("idComuna");
+            
             let tipos = '';
             //const checked = $(".check:checked").length;
             var contador = 0;
@@ -210,7 +213,9 @@
                                     alias:alias,
                                     rut:rut,
                                     mail:mail,
-                                    region:region,
+                                    id_region:region,
+                                    nomRegion:nomRegion,
+                                    id_comuna:idComuna,
                                     comuna:comuna,
                                     candidato:candidato,
                                     checkbox:tipos

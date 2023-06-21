@@ -14,7 +14,7 @@
 
     $resultadoC = $conexion->query($queryC);
 
-    $html = "<option value=''>seleccionar una region...</option>";
+    $html = "<option value=''>seleccionar una comuna...</option>";
     while ($comunas = $resultadoC->fetch_assoc()) 
     {
         $html.= "<option idComuna='".$comunas['id_comuna']."' value='".$comunas['nombre']."'>".$comunas['nombre']."</option>";

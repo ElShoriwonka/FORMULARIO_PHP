@@ -24,4 +24,7 @@ PASO 4
 
 PD: LA BASE DE DATOS POR DEFECTO SU SERVER ES "localhost", USER "root", CONTRASEÑA VACIA "", NOMBRE DE LA BASE DE DATOS "formulario".
 
+version de php utilizada: PHP Version 8.2.4
+version de mySql uttilizada: 10.4.28-MariaDB
+
 
